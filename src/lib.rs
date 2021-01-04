@@ -84,11 +84,11 @@ macro_rules! ros_nalgebra_msg {
 
         impl From<::nalgebra::Vector3<f64>> for $ns::geometry_msgs::Vector3 {
             fn from(vec: ::nalgebra::Vector3<f64>) -> Self {
-                let mut m = $ns::geometry_msgs::Vector3::default();
-                m.x = vec.x;
-                m.y = vec.y;
-                m.z = vec.z;
-                m
+                $ns::geometry_msgs::Vector3 {
+                    x: vec.x,
+                    y: vec.y,
+                    z: vec.z,
+                }
             }
         }
 
@@ -101,11 +101,11 @@ macro_rules! ros_nalgebra_msg {
 
         impl From<::nalgebra::Translation3<f64>> for $ns::geometry_msgs::Vector3 {
             fn from(p: ::nalgebra::Translation3<f64>) -> Self {
-                let mut m = $ns::geometry_msgs::Vector3::default();
-                m.x = p.vector.x;
-                m.y = p.vector.y;
-                m.z = p.vector.z;
-                m
+                $ns::geometry_msgs::Vector3 {
+                    x: p.vector.x,
+                    y: p.vector.y,
+                    z: p.vector.z,
+                }
             }
         }
     };
@@ -119,11 +119,11 @@ macro_rules! ros_nalgebra_msg {
 
         impl From<::nalgebra::Translation3<f64>> for $ns::geometry_msgs::Point {
             fn from(p: ::nalgebra::Translation3<f64>) -> Self {
-                let mut m = $ns::geometry_msgs::Point::default();
-                m.x = p.vector.x;
-                m.y = p.vector.y;
-                m.z = p.vector.z;
-                m
+                $ns::geometry_msgs::Point {
+                    x: p.vector.x,
+                    y: p.vector.y,
+                    z: p.vector.z,
+                }
             }
         }
 
@@ -136,11 +136,11 @@ macro_rules! ros_nalgebra_msg {
 
         impl From<::nalgebra::Point3<f64>> for $ns::geometry_msgs::Point {
             fn from(p: ::nalgebra::Point3<f64>) -> Self {
-                let mut m = $ns::geometry_msgs::Point::default();
-                m.x = p.coords.x;
-                m.y = p.coords.y;
-                m.z = p.coords.z;
-                m
+                $ns::geometry_msgs::Point {
+                    x: p.coords.x,
+                    y: p.coords.y,
+                    z: p.coords.z,
+                }
             }
         }
     };
@@ -156,12 +156,12 @@ macro_rules! ros_nalgebra_msg {
 
         impl From<::nalgebra::UnitQuaternion<f64>> for $ns::geometry_msgs::Quaternion {
             fn from(q: ::nalgebra::UnitQuaternion<f64>) -> Self {
-                let mut m = $ns::geometry_msgs::Quaternion::default();
-                m.x = q.coords.x;
-                m.y = q.coords.y;
-                m.z = q.coords.z;
-                m.w = q.coords.w;
-                m
+                $ns::geometry_msgs::Quaternion {
+                    x: q.coords.x,
+                    y: q.coords.y,
+                    z: q.coords.z,
+                    w: q.coords.w,
+                }
             }
         }
 
@@ -174,12 +174,12 @@ macro_rules! ros_nalgebra_msg {
 
         impl From<::nalgebra::Quaternion<f64>> for $ns::geometry_msgs::Quaternion {
             fn from(q: ::nalgebra::Quaternion<f64>) -> Self {
-                let mut m = $ns::geometry_msgs::Quaternion::default();
-                m.x = q.coords.x;
-                m.y = q.coords.y;
-                m.z = q.coords.z;
-                m.w = q.coords.w;
-                m
+                $ns::geometry_msgs::Quaternion {
+                    x: q.coords.x,
+                    y: q.coords.y,
+                    z: q.coords.z,
+                    w: q.coords.w,
+                }
             }
         }
     };
@@ -196,11 +196,10 @@ macro_rules! ros_nalgebra_msg {
 
         impl From<::nalgebra::Isometry3<f64>> for $ns::geometry_msgs::Pose {
             fn from(pose: ::nalgebra::Isometry3<f64>) -> Self {
-                let mut m = $ns::geometry_msgs::Pose::default();
-                m.position = pose.translation.into();
-                let q: ::nalgebra::UnitQuaternion<f64> = pose.rotation.into();
-                m.orientation = q.into();
-                m
+                $ns::geometry_msgs::Pose {
+                    position: pose.translation.into(),
+                    orientation: pose.rotation.into(),
+                }
             }
         }
     };
@@ -217,11 +216,10 @@ macro_rules! ros_nalgebra_msg {
 
         impl From<::nalgebra::Isometry3<f64>> for $ns::geometry_msgs::Transform {
             fn from(pose: ::nalgebra::Isometry3<f64>) -> Self {
-                let mut m = $ns::geometry_msgs::Transform::default();
-                m.translation = pose.translation.into();
-                let q: ::nalgebra::UnitQuaternion<f64> = pose.rotation.into();
-                m.rotation = q.into();
-                m
+                $ns::geometry_msgs::Transform {
+                    translation: pose.translation.into(),
+                    rotation: pose.rotation.into(),
+                }
             }
         }
     };
