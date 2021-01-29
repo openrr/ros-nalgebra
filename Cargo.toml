@@ -1,6 +1,6 @@
 [package]
 name = "ros-nalgebra"
-version = "0.0.3"
+version = "0.0.4"
 authors = ["Takashi Ogura <ogura@smilerobotics.com>"]
 description = "ROS message converter for rosrust and nalgebra"
 edition = "2018"
