@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: 1
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  test:
+    runs-on: ubuntu-18.04
+    container:
+      image: docker://ros:melodic-ros-base
+    env:
+      HOME: /root
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          apt-get update
+          apt-get -y install curl
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+      - name: Test
+        run: |
+          source /opt/ros/melodic/setup.bash
+          rosdep install -y -i --from-paths .
+          cargo test
