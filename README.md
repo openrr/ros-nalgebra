@@ -1,5 +1,7 @@
 # ros-nalgebra
 
+[![Build Status](https://img.shields.io/github/workflow/status/openrr/ros-nalgebra/CI/main)](https://github.com/openrr/ros-nalgebra/actions)
+
 Generate code to convert `geometry_msgs` into nalgebra structs, for [rosrust](https://github.com/adnanademovic/rosrust).
 
 ## Pre-requirements & dependencies
