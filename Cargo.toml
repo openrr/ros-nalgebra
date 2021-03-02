@@ -10,5 +10,7 @@ repository = "https://github.com/smilerobotics/ros-nalgebra"
 readme = "README.md"
 
 [dependencies]
+
+[dev-dependencies]
 rosrust = "0.9"
 nalgebra = "0.25"
