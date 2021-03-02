@@ -11,4 +11,4 @@ readme = "README.md"
 
 [dependencies]
 rosrust = "0.9"
-nalgebra = "0.24"
+nalgebra = "0.25"
