@@ -56,7 +56,7 @@ macro_rules! rosmsg_include {
             geometry_msgs/Vector3,
             $($ns/$msg),*
         );
-        ::ros_nalgebra::ros_nalgebra!(self);
+        $crate::ros_nalgebra!(self);
     }
 }
 
@@ -246,10 +246,10 @@ macro_rules! ros_nalgebra_msg {
 #[macro_export]
 macro_rules! ros_nalgebra {
     ($ns:ident) => {
-        ::ros_nalgebra::ros_nalgebra_msg!($ns, Point);
-        ::ros_nalgebra::ros_nalgebra_msg!($ns, Vector3);
-        ::ros_nalgebra::ros_nalgebra_msg!($ns, Quaternion);
-        ::ros_nalgebra::ros_nalgebra_msg!($ns, Pose);
-        ::ros_nalgebra::ros_nalgebra_msg!($ns, Transform);
+        $crate::ros_nalgebra_msg!($ns, Point);
+        $crate::ros_nalgebra_msg!($ns, Vector3);
+        $crate::ros_nalgebra_msg!($ns, Quaternion);
+        $crate::ros_nalgebra_msg!($ns, Pose);
+        $crate::ros_nalgebra_msg!($ns, Transform);
     };
 }
