@@ -1,12 +1,12 @@
 [package]
 name = "ros-nalgebra"
-version = "0.0.4"
+version = "0.0.5"
 authors = ["Takashi Ogura <ogura@smilerobotics.com>"]
 description = "ROS message converter for rosrust and nalgebra"
 edition = "2018"
 license = "Apache-2.0"
 categories = ["algorithms"]
-repository = "https://github.com/smilerobotics/ros-nalgebra"
+repository = "https://github.com/openrr/ros-nalgebra"
 readme = "README.md"
 
 [dependencies]
