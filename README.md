@@ -1,6 +1,6 @@
 # ros-nalgebra
 
-[![Build Status](https://img.shields.io/github/workflow/status/openrr/ros-nalgebra/CI/main)](https://github.com/openrr/ros-nalgebra/actions)
+[![Build Status](https://img.shields.io/github/workflow/status/openrr/ros-nalgebra/CI/main)](https://github.com/openrr/ros-nalgebra/actions) [![crates.io](https://img.shields.io/crates/v/ros-nalgebra.svg)](https://crates.io/crates/ros-nalgebra) [![docs](https://docs.rs/ros-nalgebra/badge.svg)](https://docs.rs/ros-nalgebra)
 
 Generate code to convert `geometry_msgs` into nalgebra structs, for [rosrust](https://github.com/adnanademovic/rosrust).
 
