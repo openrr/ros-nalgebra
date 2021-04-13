@@ -7,7 +7,6 @@ edition = "2018"
 license = "Apache-2.0"
 categories = ["algorithms"]
 repository = "https://github.com/openrr/ros-nalgebra"
-readme = "README.md"
 
 [dependencies]
 
