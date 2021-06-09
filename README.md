@@ -73,7 +73,7 @@ mode msg {
 }
 ```
 
-Then you can use `ros_nalgebra::ros_nlagebra_msg!()` in your crate.
+Then you can use `ros_nalgebra::ros_nalgebra_msg!()` in your crate.
 
 ```rust
 // generate conversion code only for `geometry_msgs/Point` which is defined in `::some_other_crate::msg`.
