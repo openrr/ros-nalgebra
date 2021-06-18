@@ -2,12 +2,13 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 env:
   CARGO_TERM_COLOR: always
+  RUSTFLAGS: -D warnings
   RUST_BACKTRACE: 1
 
 defaults:
@@ -31,6 +32,12 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
+          components: rustfmt,clippy
+      - run: cargo fmt --all -- --check
+      - name: Clippy
+        run: |
+          source /opt/ros/melodic/setup.bash
+          cargo clippy --all-targets
       - name: Test
         run: |
           source /opt/ros/melodic/setup.bash
