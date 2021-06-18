@@ -36,6 +36,8 @@
 //! }
 //! ```
 
+#![warn(missing_debug_implementations, rust_2018_idioms)]
+
 /// Use this macro instead of rosrust::rosmsg_include!() to generate `impl From`.
 ///
 /// # Example
