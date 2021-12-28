@@ -51,7 +51,7 @@ fn main() {
 
 Below messages are automatically included by ros_nalgebra::rosmsg_include!(). Do not include them in your code.
 
-```rust
+```text
 geometry_msgs/Point,
 geometry_msgs/Pose,
 geometry_msgs/Quaternion,
@@ -68,8 +68,8 @@ If some messages are included already (for example in other crate), you can use 
 In `some_other_crate`,
 
 ```rust
-mode msg {
-  rosrust::rosmsg_include!(geometry_msgs/Point);
+mod msg {
+    rosrust::rosmsg_include!(geometry_msgs/Point);
 }
 ```
 

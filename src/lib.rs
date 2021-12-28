@@ -13,29 +13,8 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 */
-//! Generate code to convert `geometry_msgs` into nalgebra structs, for [rosrust](https://github.com/adnanademovic/rosrust).
-//!
-//! ## Pre-requirements & dependencies
-//!
-//! * [ROS](https://ros.org)
-//! * [Rust](https://rust-lang.org)
-//! * [rosrust](https://github.com/adnanademovic/rosrust)
-//! * [nalgebra](https://nalgebra.org/)
-//!
-//! ## How to use
-//!
-//! ### Easy usage: `ros_nalgebra::rosmsg_include!()`
-//!
-//! Use `ros_nalgebra::rosmsg_include` instead of `rosrust::rosmsg_include` in your code.
-//!
-//! # Example
-//!
-//! ```
-//! mod msg {
-//!    ros_nalgebra::rosmsg_include!(nav_msgs/Odometry);
-//! }
-//! ```
 
+#![doc = include_str!("../README.md")]
 #![warn(missing_debug_implementations, rust_2018_idioms)]
 
 /// Use this macro instead of rosrust::rosmsg_include!() to generate `impl From`.
@@ -44,7 +23,7 @@
 ///
 /// ```
 /// mod msg {
-///    ros_nalgebra::rosmsg_include!(nav_msgs/Odometry);
+///     ros_nalgebra::rosmsg_include!(nav_msgs/Odometry);
 /// }
 /// ```
 #[macro_export]
@@ -67,7 +46,7 @@ macro_rules! rosmsg_include {
 ///
 /// ```
 /// mod msg {
-///    rosrust::rosmsg_include!(geometry_msgs/Pose);
+///     rosrust::rosmsg_include!(geometry_msgs/Pose);
 /// }
 /// ros_nalgebra::ros_nalgebra_msg!(msg, Quaternion);
 /// ros_nalgebra::ros_nalgebra_msg!(msg, Point);
@@ -235,13 +214,13 @@ macro_rules! ros_nalgebra_msg {
 ///
 /// ```
 /// mod msg {
-///   rosrust::rosmsg_include!(
-///     geometry_msgs/Point,
-///     geometry_msgs/Pose,
-///     geometry_msgs/Quaternion,
-///     geometry_msgs/Transform,
-///     geometry_msgs/Vector3,
-///   );
+///     rosrust::rosmsg_include!(
+///         geometry_msgs/Point,
+///         geometry_msgs/Pose,
+///         geometry_msgs/Quaternion,
+///         geometry_msgs/Transform,
+///         geometry_msgs/Vector3,
+///     );
 /// }
 /// ros_nalgebra::ros_nalgebra!(msg);
 /// ```
