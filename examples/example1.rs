@@ -13,13 +13,15 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 */
-use nalgebra as na;
 
-mod msg {
-    ros_nalgebra::rosmsg_include!(nav_msgs / Odometry);
-}
-
+#[cfg(target_os = "linux")]
 fn main() {
+    use nalgebra as na;
+
+    mod msg {
+        ros_nalgebra::rosmsg_include!(nav_msgs / Odometry);
+    }
+
     let mut odom_msg = msg::nav_msgs::Odometry::default();
     odom_msg.pose.pose.position.x = 1.0;
     odom_msg.pose.pose.position.y = -1.0;
@@ -35,4 +37,9 @@ fn main() {
     pose2.translation.vector.x = -5.0;
     let pose_msg: msg::geometry_msgs::Pose = pose2.into();
     println!("{:?}", pose_msg);
+}
+
+#[cfg(not(target_os = "linux"))]
+fn main() {
+    println!("This example only works on Linux");
 }
