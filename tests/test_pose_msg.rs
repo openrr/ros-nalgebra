@@ -13,7 +13,9 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 */
-#[cfg(test)]
+
+#![cfg(target_os = "linux")]
+
 mod tests {
     use nalgebra as na;
 

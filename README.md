@@ -49,7 +49,7 @@ fn main() {
 
 #### Automatically defined messages by `ros_nalgebra::rosmsg_include!()`
 
-Below messages are automatically included by ros_nalgebra::rosmsg_include!(). Do not include them in your code.
+Below messages are automatically included by `ros_nalgebra::rosmsg_include!()`. Do not include them in your code.
 
 ```text
 geometry_msgs/Point,
@@ -75,9 +75,9 @@ mod msg {
 
 Then you can use `ros_nalgebra::ros_nalgebra_msg!()` in your crate.
 
-```rust
-// generate conversion code only for `geometry_msgs/Point` which is defined in `::some_other_crate::msg`.
-ros_nalgebra::ros_nalgebra_msg!(::some_other_crate::msg, Point);
+```rust,ignore
+// generate conversion code only for `geometry_msgs/Point` which is defined in `some_other_crate::msg`.
+ros_nalgebra::ros_nalgebra_msg!(some_other_crate::msg, Point);
 ```
 
 ## Supported conversions
