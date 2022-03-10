@@ -31,12 +31,12 @@ fn main() {
     odom_msg.pose.pose.orientation.z = 0.0;
     odom_msg.pose.pose.orientation.w = 1.0;
     let pose = na::Isometry3::from(odom_msg.pose.pose);
-    println!("{}", pose);
+    println!("{pose}");
 
     let mut pose2 = pose;
     pose2.translation.vector.x = -5.0;
     let pose_msg: msg::geometry_msgs::Pose = pose2.into();
-    println!("{:?}", pose_msg);
+    println!("{pose_msg:?}");
 }
 
 #[cfg(not(target_os = "linux"))]
