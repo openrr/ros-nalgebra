@@ -2,8 +2,8 @@
 name = "ros-nalgebra"
 version = "0.0.6"
 authors = ["Takashi Ogura <ogura@smilerobotics.com>"]
+edition = "2021"
 description = "ROS message converter for rosrust and nalgebra"
-edition = "2018"
 license = "Apache-2.0"
 categories = ["algorithms"]
 repository = "https://github.com/openrr/ros-nalgebra"
