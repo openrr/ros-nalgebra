@@ -36,14 +36,14 @@ fn main() {
 
     // convert into nalgebra::Isometry<f64> by `from()`
     let pose = na::Isometry3::from(odom_msg.pose.pose);
-    println!("{}", pose);
+    println!("{pose}");
 
     let mut pose2 = pose.clone();
     pose2.translation.vector.x = -5.0;
 
     // convert into ROS msg using `into()`
     let pose_msg: msg::geometry_msgs::Pose = pose2.into();
-    println!("{:?}", pose_msg);
+    println!("{pose_msg:?}");
 }
 ```
 
