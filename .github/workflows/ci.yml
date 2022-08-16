@@ -25,7 +25,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: docker://ros:melodic-ros-base
+      image: docker://ros:noetic-ros-base
     env:
       HOME: /root
     steps:
@@ -39,10 +39,10 @@ jobs:
       - run: cargo fmt --all --check
       - name: Clippy
         run: |
-          source /opt/ros/melodic/setup.bash
+          source /opt/ros/noetic/setup.bash
           cargo clippy --all-targets
       - name: Test
         run: |
-          source /opt/ros/melodic/setup.bash
+          source /opt/ros/noetic/setup.bash
           rosdep install -y -i --from-paths .
           cargo test
