@@ -23,7 +23,7 @@ defaults:
 
 jobs:
   test:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     container:
       image: docker://ros:melodic-ros-base
     env:
