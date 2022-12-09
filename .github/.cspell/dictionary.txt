@@ -1,0 +1,11 @@
+clippy
+nalgebra
+odometry
+rosdep
+rosmsg
+rosrust
+rustdocflags
+rustflags
+rustfmt
+rustup
+structs
