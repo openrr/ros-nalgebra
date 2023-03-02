@@ -1,6 +1,6 @@
 # ros-nalgebra
 
-[![Build Status](https://img.shields.io/github/workflow/status/openrr/ros-nalgebra/CI/main)](https://github.com/openrr/ros-nalgebra/actions) [![crates.io](https://img.shields.io/crates/v/ros-nalgebra.svg)](https://crates.io/crates/ros-nalgebra) [![docs](https://docs.rs/ros-nalgebra/badge.svg)](https://docs.rs/ros-nalgebra)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/openrr/ros-nalgebra/ci.yml?branch=main&logo=github)](https://github.com/openrr/ros-nalgebra/actions) [![crates.io](https://img.shields.io/crates/v/ros-nalgebra.svg?logo=rust)](https://crates.io/crates/ros-nalgebra) [![docs](https://docs.rs/ros-nalgebra/badge.svg)](https://docs.rs/ros-nalgebra) [![discord](https://dcbadge.vercel.app/api/server/8DAFFKc88B?style=flat)](https://discord.gg/8DAFFKc88B)
 
 Generate code to convert `geometry_msgs` into nalgebra structs, for [rosrust](https://github.com/adnanademovic/rosrust).
 
@@ -87,3 +87,7 @@ See lib.rs.
 ## TODO
 
 Handle dependencies.
+
+## `OpenRR` Community
+
+[Here](https://discord.gg/8DAFFKc88B) is a discord server for `OpenRR` users and developers.
