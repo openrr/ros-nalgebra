@@ -1,7 +1,7 @@
 #![cfg(target_os = "linux")]
 
 mod nested {
-    pub mod msg {
+    pub(crate) mod msg {
         rosrust::rosmsg_include!(
             geometry_msgs / Point,
             geometry_msgs / Pose,
