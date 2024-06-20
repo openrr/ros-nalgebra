@@ -1,3 +1,4 @@
+doctest
 odometry
 rosdep
 rosmsg
