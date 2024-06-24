@@ -12,7 +12,7 @@ repository = "https://github.com/openrr/ros-nalgebra"
 
 [dev-dependencies]
 rosrust = "0.9"
-nalgebra = "0.32"
+nalgebra = "0.33"
 
 [lints]
 workspace = true
