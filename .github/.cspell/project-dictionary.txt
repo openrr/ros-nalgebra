@@ -5,4 +5,3 @@ rosmsg
 rustdocflags
 rustflags
 rustup
-structs
