@@ -4,4 +4,3 @@ rosdep
 rosmsg
 rustdocflags
 rustflags
-rustup
