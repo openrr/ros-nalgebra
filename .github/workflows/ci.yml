@@ -37,7 +37,7 @@ jobs:
     env:
       HOME: /root
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           apt-get update
           apt-get -y install curl
@@ -62,7 +62,7 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: echo "REMOVE_UNUSED_WORDS=1" >>"${GITHUB_ENV}"
         if: github.repository_owner == 'openrr' && (github.event_name == 'schedule' || github.event_name == 'push' && github.ref == 'refs/heads/main')
       - run: tools/spell-check.sh
